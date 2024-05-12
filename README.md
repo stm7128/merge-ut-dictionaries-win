@@ -38,7 +38,7 @@ git clone https://github.com/utuhiro78/merge-ut-dictionaries.git
 cd merge-ut-dictionaries/src/
 ```
 
-Comment out unnecessary UT dictionaries in make.sh.
+Comment out unnecessary UT dictionaries in make.ps1.
 
 Default settings:
 
@@ -58,27 +58,12 @@ If you already have the latest jawiki, put it to src/ and comment out ```jawiki=
 Generate mozcdic-ut.txt.
 
 ```
-sh make.sh
-cat mozcdic-ut.txt >> ../../mozc-master/src/data/dictionary_oss/dictionary00.txt
+.\make.ps1
+Get-Content mozcdic-ut.txt >> ../../mozc-master/src/data/dictionary_oss/dictionary00.txt
 ```
 
 Build Mozc as usual.
 
-## Build fcitx5-mozc on Arch Linux
-
-```
-git clone https://github.com/utuhiro78/merge-ut-dictionaries.git
-
-cd merge-ut-dictionaries/src/
-sh make.sh
-mv mozcdic-ut.txt PKGBUILD/
-
-cd PKGBUILD/
-ruby get_fcitx5_mozc.rb
-
-rm -rf ~/.cache/bazel/
-makepkg -is -p fcitx5-mozc-ut.PKGBUILD
-```
 
 ## Dictionaries
 
