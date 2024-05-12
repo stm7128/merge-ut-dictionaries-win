@@ -21,7 +21,11 @@ id_mozc = id_mozc.split("\n")[-1]
 filename = ARGV[0]
 dicname = filename
 
-file = File.new(filename, "r")
+unless File.exist?(filename)
+  File.new("mozcdic-ut.txt", "w")
+end
+
+file = File.new(filename, "r+")
 	lines = file.read.split("\n")
 file.close
 
