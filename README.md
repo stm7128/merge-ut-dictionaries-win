@@ -59,7 +59,7 @@ Generate mozcdic-ut.txt.
 
 ```
 .\make.ps1
-Get-Content mozcdic-ut.txt >> ../../mozc-master/src/data/dictionary_oss/dictionary00.txt
+Get-Content mozcdic-ut.txt >> ..\..\mozc-master\src\data\dictionary_oss\dictionary00.txt
 ```
 
 Build Mozc as usual.
