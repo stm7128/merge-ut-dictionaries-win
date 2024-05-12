@@ -33,9 +33,9 @@ merge-ut-dictionaries: [40 Stars](https://github.com/utuhiro78/merge-ut-dictiona
 ## Build
 
 ```
-git clone https://github.com/utuhiro78/merge-ut-dictionaries.git
+git clone https://github.com/stm7128/merge-ut-dictionaries-win.git
 
-cd merge-ut-dictionaries/src/
+cd merge-ut-dictionaries\src\
 ```
 
 Comment out unnecessary UT dictionaries in make.ps1.
@@ -43,14 +43,14 @@ Comment out unnecessary UT dictionaries in make.ps1.
 Default settings:
 
 ```
-#alt_cannadic="true"
-#edict="true"
-jawiki="true"
-#neologd="true"
-personal_names="true"
-place_names="true"
-#skk_jisyo="true"
-sudachidict="true"
+#$alt_cannadic = $true
+#$edict = $true
+$jawiki = $true
+#$neologd = $true
+$personal_names = $true
+$place_names = $true
+#$skk_jisyo = $true
+$sudachidict = $true
 ```
 
 If you already have the latest jawiki, put it to src/ and comment out ```jawiki="true"```. Do the same for other dictionaries.
